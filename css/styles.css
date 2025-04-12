@@ -1,0 +1,367 @@
+
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #000;
+  color: white;
+}
+
+.container {
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+  flex-direction: row;
+}
+
+.left-section {
+  background: rgb(0,0,0);
+  background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(150,160,171,1) 76%, rgba(220,235,238,1) 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.right-section {
+  background: rgb(0,0,0);
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.profile-img {
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+}
+
+.social-title {
+  font-size: 40px;
+  font-family: 'Playfair Display', serif;
+  color: #ffffff;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+  margin-bottom: 30px;
+  animation: fadeInDown 1s ease-out;
+}
+
+
+.social-icons {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.social-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.social-icons a {
+  color: white;
+  font-size: 32px;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-icons a:hover {
+  transform: scale(1.2);
+  color: #000000;
+}
+
+.social-handle {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  padding: 6px 12px;
+  border-radius: 10px;
+  backdrop-filter: blur(6px);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
+  color: white;
+}
+
+
+
+.description {
+  font-family: 'Playfair Display', serif;
+  font-size: 24px;
+  font-weight: bold;
+  color: #ffffff;
+  text-align: center;
+  margin-top: 20px;
+  max-width: 80%;
+  line-height: 1.6;
+  padding: 20px 25px;
+  border-radius: 12px;
+  animation: fadeInUp 1s ease-out;
+  text-shadow:
+    -2px -2px 0 #000,  
+     2px -2px 0 #000,
+    -2px  2px 0 #000,
+     2px  2px 0 #000,
+    -1px  0px 0 #000,
+     1px  0px 0 #000,
+     0px -1px 0 #000,
+     0px  1px 0 #000;
+}
+
+.courses-section {
+  background-color: #000;
+  padding: 60px 30px;
+  text-align: center;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@700&display=swap');
+
+.courses-title {
+  font-family: 'Unbounded', sans-serif;
+  font-size: 52px;
+  color: #f0f0f0;
+  text-align: center;
+  margin-bottom: 40px;
+  text-shadow: 2px 2px 6px rgba(255, 255, 255, 0.05);
+  animation: fadeInDown 1s ease-out;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+
+.courses-content {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.course-card {
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid #d6cdae;
+  border-radius: 12px;
+  overflow: hidden;
+  width: 280px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  backdrop-filter: blur(6px);
+}
+
+.course-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(212, 175, 55, 0.5);
+}
+
+.course-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.course-name {
+  font-family: 'Playfair Display', serif;
+  font-size: 20px;
+  color: white;
+  padding: 15px;
+}
+
+.services-section {
+  background-color: #000;
+  padding: 60px 30px;
+  text-align: center;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@700&display=swap');
+
+.services-title {
+  font-family: 'Unbounded', sans-serif;
+  font-size: 52px;
+  color: #f0f0f0;
+  text-align: center;
+  margin-bottom: 40px;
+  text-shadow: 2px 2px 6px rgba(255, 255, 255, 0.05);
+  animation: fadeInDown 1s ease-out;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.services-content {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.service-card {
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid #d6cdae;
+  border-radius: 12px;
+  overflow: hidden;
+  width: 280px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  backdrop-filter: blur(6px);
+}
+
+.service-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(212, 175, 55, 0.5);
+}
+
+.service-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.service-name {
+  font-family: 'Playfair Display', serif;
+  font-size: 20px;
+  color: white;
+  padding: 15px;
+}
+
+/* RESPONSIVE */
+@media screen and (max-width: 768px) {
+  .courses-title {
+    font-size: 36px;
+  }
+
+  .courses-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .course-card {
+    width: 90%;
+  }
+}
+
+.services-title {
+  font-size: 36px;
+}
+
+.services-content {
+  flex-direction: column;
+  align-items: center;
+}
+
+.service-card {
+  width: 90%;
+}
+
+
+
+
+
+/* RESPONSIVE */
+@media screen and (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .left-section,
+  .right-section {
+    width: 100%;
+    padding: 30px 20px;
+  }
+
+  .profile-img {
+    width: 240px;
+    height: 420px;
+  }
+
+  .social-title {
+    font-size: 45px;
+  }
+
+  .social-icons {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  
+
+
+
+  .social-handle {
+    font-size: 20px;
+  }
+
+  .social-icons a svg {
+    width: 56px;
+    height: 56px;
+  }
+}
+
+.description {
+  margin-top: 15px;
+  font-size: 20px;
+  color: #d4af37;
+  text-align: center;
+  max-width: 300px;
+}
+
+.gallery-title {
+  font-size: 28px;
+}
+
+.image-gallery {
+  flex-direction: column;
+  align-items: center;
+}
+
+.image-gallery img {
+  width: 80%;
+  max-width: 320px;
+  height: auto;
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+
+
+.description {
+  font-family: 'Playfair Display', serif;
+  font-size: 20px;
+  color: #ffffff;
+  text-align: center;
+  margin-top: 15px;
+  max-width: 80%;
+  line-height: 1.5;
+  padding: 15px 20px;
+  border-radius: 12px;
+ 
+}
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.social-icons {
+  animation: fadeInUp 1s ease-out;
+}
+
+.social-item {
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-item:hover {
+  transform: scale(1.1);
+}
+
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
