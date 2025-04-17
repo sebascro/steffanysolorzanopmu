@@ -4,9 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Stefany Solorzano</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Tangerine&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css" />
 </head>
+<body>
 <div class="container">
     <div class="left-section">
         <img src="media/Diseño sin título.png" alt="Stefany Solorzano" class="profile-img" />
@@ -172,5 +174,18 @@
         </div>
     </div>
 </section>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const profileImg = document.querySelector(".profile-img");
+
+    profileImg.addEventListener("mouseenter", function () {
+      profileImg.classList.add("highlight-border");
+    });
+
+    profileImg.addEventListener("mouseleave", function () {
+      profileImg.classList.remove("highlight-border");
+    });
+  });
+</script>
 </body>
 </html>
