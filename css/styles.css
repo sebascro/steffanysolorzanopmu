@@ -1,9 +1,9 @@
 
 body {
   margin: 0;
-  font-family: 'Arial', sans-serif;
   background-color: #000;
   color: white;
+  font-family: 'Tangerine', cursive !important;
 }
 
 .container {
@@ -41,7 +41,7 @@ body {
 
 .social-title {
   font-size: 40px;
-  font-family: 'Playfair Display', serif;
+  font-family: 'Tangerine', cursive !important;
   color: #ffffff;
   text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
   margin-bottom: 30px;
@@ -63,7 +63,7 @@ body {
 
 .social-icons a {
   color: white;
-  font-size: 32px;
+  font-size: 28px;
   transition: transform 0.3s ease, color 0.3s ease;
 }
 
@@ -82,30 +82,47 @@ body {
   color: white;
 }
 
+.video-section {
+  padding: 2rem;
+  background-color: #000000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.video-container {
+  width: 100%;
+  max-width: 800px;
+  aspect-ratio: 16 / 9; /* Mantiene proporción de video */
+  overflow: hidden;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+}
+
+.video-container video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 16px;
+}
+
+
 
 
 .description {
-  font-family: 'Playfair Display', serif;
-  font-size: 24px;
+  font-family: 'Tangerine', cursive;  /* Fuente Tangerine */
+  font-size: 24px;  /* Ajusta según necesites */
   font-weight: bold;
   color: #ffffff;
   text-align: center;
-  margin-top: 20px;
+  margin-top: 15px;
   max-width: 80%;
-  line-height: 1.6;
-  padding: 20px 25px;
+  line-height: 1.5;
+  padding: 15px 20px;
   border-radius: 12px;
   animation: fadeInUp 1s ease-out;
-  text-shadow:
-    -2px -2px 0 #000,  
-     2px -2px 0 #000,
-    -2px  2px 0 #000,
-     2px  2px 0 #000,
-    -1px  0px 0 #000,
-     1px  0px 0 #000,
-     0px -1px 0 #000,
-     0px  1px 0 #000;
 }
+
 
 .courses-section {
   background-color: #000;
@@ -113,10 +130,10 @@ body {
   text-align: center;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@700&display=swap');
+
 
 .courses-title {
-  font-family: 'Unbounded', sans-serif;
+  font-family: 'Tangerine', cursive !important;
   font-size: 52px;
   color: #f0f0f0;
   text-align: center;
@@ -157,45 +174,54 @@ body {
 }
 
 .course-name {
-  font-family: 'Playfair Display', serif;
-  font-size: 20px;
+  font-family: 'Tangerine', cursive !important;
+  font-size: 40px;
   color: white;
   padding: 15px;
 }
 
 .services-section {
+  padding: 60px 20px;
   background-color: #000;
-  padding: 60px 30px;
   text-align: center;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@700&display=swap');
-
+/* Título */
 .services-title {
-  font-family: 'Unbounded', sans-serif;
+  font-family: 'Tangerine', cursive;
   font-size: 52px;
   color: #f0f0f0;
-  text-align: center;
   margin-bottom: 40px;
   text-shadow: 2px 2px 6px rgba(255, 255, 255, 0.05);
-  animation: fadeInDown 1s ease-out;
   letter-spacing: 2px;
   text-transform: uppercase;
+  animation: fadeInDown 1s ease-out;
 }
 
+/* Grid/flex de tarjetas */
 .services-content {
   display: flex;
-  justify-content: center;
   flex-wrap: wrap;
+  justify-content: center;
   gap: 30px;
+  margin: 0 auto;
+  padding: 0 20px; /* evita que toquen los bordes */
 }
 
+/* Enlace que envuelve la tarjeta */
+.service-link {
+  display: block;
+  width: 280px;      /* ancho fijo en desktop */
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Tarjeta */
 .service-card {
   background-color: rgba(255, 255, 255, 0.05);
   border: 1px solid #d6cdae;
   border-radius: 12px;
   overflow: hidden;
-  width: 280px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   backdrop-filter: blur(6px);
 }
@@ -212,8 +238,8 @@ body {
 }
 
 .service-name {
-  font-family: 'Playfair Display', serif;
-  font-size: 20px;
+  font-family: 'Tangerine', cursive;
+  font-size: 24px;
   color: white;
   padding: 15px;
 }
@@ -234,18 +260,25 @@ body {
   }
 }
 
-.services-title {
+services-title {
   font-size: 36px;
 }
 
 .services-content {
   flex-direction: column;
   align-items: center;
+  gap: 20px;
 }
 
-.service-card {
-  width: 90%;
+.service-link {
+  width: 100%;       /* ocupa todo el ancho disponible */
+  max-width: 350px;  /* no crecer más allá */
 }
+
+.service-card img {
+  height: auto;      /* que se adapte al ancho */
+}
+
 
 
 
@@ -283,7 +316,7 @@ body {
 
 
   .social-handle {
-    font-size: 20px;
+    font-size: 45px;
   }
 
   .social-icons a svg {
@@ -316,19 +349,20 @@ body {
 }
 
 
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+
 
 
 .description {
-  font-family: 'Playfair Display', serif;
-  font-size: 20px;
+  font-family: 'Tangerine', cursive !important;
+  font-size: 35px;
   color: #ffffff;
   text-align: center;
   margin-top: 15px;
-  max-width: 80%;
+  max-width: 100%;
   line-height: 1.5;
   padding: 15px 20px;
   border-radius: 12px;
+  font-weight: bold;
  
 }
 @keyframes fadeInUp {
