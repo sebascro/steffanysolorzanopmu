@@ -49,7 +49,6 @@ body {
   animation: fadeInDown 1s ease-out;
 }
 
-
 .social-icons {
   display: flex;
   flex-direction: column;
@@ -57,32 +56,52 @@ body {
 }
 
 .social-item {
+  display: block; /* Para que el enlace ocupe todo el bloque */
+}
+
+.social-link {
   display: flex;
   align-items: center;
-  gap: 10px;
-}
-
-.social-icons a {
-  color: white;
-  font-size: 28px;
+  color: white; /* Color del texto (icono y @handle) */
+  font-size: 28px; /* Tamaño del icono (esto puede ser reemplazado por el tamaño del SVG) */
   transition: transform 0.3s ease, color 0.3s ease;
   text-shadow: 2px 2px 6px rgba(255, 255, 255, 0.2);
+  text-decoration: none; /* Quita el subrayado del enlace */
+  width: 100%; /* Ocupa todo el ancho del .social-item */
+  padding: 6px 12px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(6px);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
+  box-sizing: border-box; /* Incluye el padding en el ancho */
 }
 
-.social-icons a:hover {
+.social-link:hover {
   transform: scale(1.2);
   color: #ffffff;
   text-shadow: 3px 3px 10px rgba(255, 255, 255, 0.5);
 }
 
-.social-handle {
-  background: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  padding: 6px 12px;
-  border-radius: 10px;
-  backdrop-filter: blur(6px);
-  box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
-  color: white;
+.social-link .social-icon {
+  margin-right: 10px;
+}
+
+.social-link svg {
+  width: 32px; /* Controla el tamaño del icono SVG */
+  height: 32px; /* Controla el tamaño del icono SVG */
+  fill: white; /* Asegura que el relleno del SVG sea blanco */
+}
+
+.social-link .social-handle {
+  background: none; /* Ya no necesitamos el fondo aquí, el .social-link lo tiene */
+  border: none; /* Ya no necesitamos el borde aquí */
+  padding: 0; /* Ya no necesitamos padding adicional */
+  border-radius: 0; /* Ya no necesitamos borde redondeado adicional */
+  backdrop-filter: none; /* Ya no necesitamos el blur aquí */
+  box-shadow: none; /* Ya no necesitamos la sombra aquí */
+  color: white; /* Asegura que el color del texto sea blanco */
+  font-size: inherit; /* Hereda el tamaño de fuente del .social-link */
 }
 
 .video-section {
@@ -251,44 +270,123 @@ body {
   
 }
 
+/* Estilos para el footer */
+.site-footer {
+  background-color: #1a1a1a; /* Un fondo oscuro similar al resto del sitio */
+  color: #f0f0f0; /* Texto claro */
+  padding: 20px;
+  text-align: center;
+  font-size: 0.8em; /* Un tamaño de fuente más pequeño */
+  font-family: sans-serif; /* Una fuente más legible para texto pequeño */
+}
+
+.site-footer p {
+  margin: 0; /* Elimina el margen predeterminado del párrafo */
+}
+
 /* RESPONSIVE */
 @media screen and (max-width: 768px) {
   .courses-title {
     font-size: 36px;
-  }
-
-  .courses-content {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .course-card {
-    width: 90%;
-  }
+    text-align: center;
 }
 
-services-title {
+.courses-content {
+    display: flex;
+    flex-direction: column; /* Apila las tarjetas */
+    align-items: center; /* Centra las tarjetas horizontalmente */
+    gap: 20px;
+}
+
+.course-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    width: 90%; /* Ocupa un porcentaje del ancho */
+    max-width: 350px; /* Ancho máximo */
+    box-sizing: border-box;
+}
+
+.course-card {
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid #d6cdae;
+    border-radius: 12px;
+    overflow: hidden;
+    width: 100%; /* Haz que la tarjeta ocupe el ancho del enlace */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    backdrop-filter: blur(6px);
+    box-sizing: border-box; /* Asegúrate de incluir padding y border */
+}
+
+.course-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(212, 175, 55, 0.5);
+}
+
+.course-card img {
+    width: 100%;
+    height: auto;
+    max-height: 180px;
+    object-fit: cover;
+}
+
+.course-name {
+    font-family: "Bellota Text", sans-serif;
+    font-size: 1.5em;
+    color: white;
+    padding: 15px;
+    text-align: center;
+}
+
+.services-title {
   font-size: 36px;
+  text-align: center;
 }
-
 .services-content {
-  flex-direction: column;
-  align-items: center;
+  display: flex;
+  flex-direction: column; /* Apila las tarjetas */
+  align-items: center; /* Centra las tarjetas horizontalmente */
   gap: 20px;
 }
 
 .service-link {
-  width: 100%;       /* ocupa todo el ancho disponible */
-  max-width: 350px;  /* no crecer más allá */
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  width: 90%; /* Ocupa un porcentaje del ancho */
+  max-width: 350px; /* Ancho máximo */
+  box-sizing: border-box;
+}
+
+
+.service-card {
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid #d6cdae;
+  border-radius: 12px;
+  overflow: hidden;
+  width: 100%; /* Haz que la tarjeta ocupe el ancho del enlace */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  backdrop-filter: blur(6px);
+  box-sizing: border-box; /* Asegúrate de incluir padding y border */
+}
+
+.service-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(212, 175, 55, 0.5);
 }
 
 .service-card img {
-  height: auto;      /* que se adapte al ancho */
+  width: 100%;
+  height: auto;
+  max-height: 180px;
+  object-fit: cover;
 }
 
-
-
-
+.service-name {
+  font-size: 1.5em;
+  text-align: center;
+  padding: 15px;
+}
 
 
 /* RESPONSIVE */
@@ -300,13 +398,80 @@ services-title {
   }
 
   .left-section,
+  
   .right-section {
     width: 100%;
-    padding: 20px; /* Reduce el padding para que no esté tan amplio */
+    padding: 20px;
     display: flex;
-    justify-content: center; /* Centra el contenido dentro de cada sección */
-  }
+    flex-direction: column; /* Asegura que los elementos internos se apilen */
+    align-items: center; /* Centra los elementos horizontalmente */
+}
 
+.social-title {
+    font-size: 36px;
+    text-align: center;
+}
+
+.social-icons {
+    width: auto; /* El ancho se ajusta al contenido */
+    display: flex;
+    flex-direction: column;
+    align-items: stretch; /* Estira los items para que tengan el mismo ancho */
+    margin: 0 auto; /* Centra el contenedor de iconos */
+    max-width: 600px; /* Ancho máximo del contenedor de iconos */
+}
+
+.social-item {
+    display: flex;
+    align-items: flex-start;
+    width: 100%; /* Cada item ocupa el ancho de .social-icons */
+    margin-bottom: 10px; /* Espacio entre los items */
+}
+
+.social-link {
+    font-size: 1.7em;
+    padding: 10px 20px; /* Aumenté un poco el padding vertical */
+    width: 100%;
+    justify-content: flex-start;
+    text-decoration: none; /* Asegúrate de que no haya subrayado */
+    color: inherit; /* Hereda el color del texto */
+    box-sizing: border-box; /* Incluye padding y border en el ancho */
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 10px;
+    backdrop-filter: blur(6px);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-link:hover {
+    transform: scale(1.05); /* Reduje un poco el zoom al hacer hover en móvil */
+    color: #ffffff;
+    text-shadow: 3px 3px 10px rgba(255, 255, 255, 0.5);
+}
+
+.social-icon svg {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+    fill: white; /* Asegúrate de que el icono sea blanco */
+}
+
+.social-handle {
+    font-size: 0.9em;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.social-icons {
+    animation: fadeInUp 1s ease-out; /* Mantén tu animación */
+}
+
+.social-item:hover {
+    transform: scale(1.02); /* Reduje un poco el zoom al hacer hover en móvil */
+}
+}
   
   .profile-img {
     width: 100%;
@@ -315,36 +480,9 @@ services-title {
     display: block;
     border: 5px solid transparent;
   }
-  .social-title {
-    font-size: 36px; /* Reduce el tamaño del texto */
-    text-align: center; /* Asegura que el título esté centrado */
-  }
 
-  .social-icons {
-    flex-direction: column;
-    align-items: center;
-    gap: 15px; /* Ajusta el espacio entre los íconos */
-  }
-
-  .social-icons i { /* Ajusta el tamaño de los iconos */
-    font-size: 30px; /* Ajusta según lo que prefieras */
-  }
-}
 
   
-
-
-
-  .social-handle {
-    font-size: 20px;
-  }
-
-  .social-icons a svg {
-    width: 56px;
-    height: 56px;
-  }
-
-
 .description {
   margin-top: 15px;
   font-size: 20px;
@@ -396,18 +534,6 @@ services-title {
   }
 }
 
-.social-icons {
-  animation: fadeInUp 1s ease-out;
-}
-
-.social-item {
-  transition: transform 0.3s ease, color 0.3s ease;
-}
-
-.social-item:hover {
-  transform: scale(1.1);
-}
-
 @keyframes fadeInDown {
   0% {
     opacity: 0;
@@ -428,4 +554,5 @@ services-title {
 .service-card.clicked {
   animation: clickFlash 0.4s ease-out;
 }
-
+}
+ 
